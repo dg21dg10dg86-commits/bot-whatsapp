@@ -1,6 +1,6 @@
 {
   "name": "bot-whatsapp-detran",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Bot WhatsApp para grupos DETRAN",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "whatsapp-web.js": "^1.23.0",
-    "qrcode-terminal": "^0.12.0"
+    "qrcode-terminal": "^0.12.0",
+    "puppeteer-core": "^21.0.0"
   },
   "engines": {
     "node": "16.x"

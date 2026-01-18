@@ -7,6 +7,9 @@ process.on("uncaughtException", (err) => {
 
 const qrcode = require("qrcode-terminal");
 const { Client, LocalAuth } = require("whatsapp-web.js");
+// Forçar usar puppeteer-core
+process.env.PUPPETEER_PRODUCT = 'chrome';
+process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = 'true';
 
 // ======= VARIÁVEIS GLOBAIS =======
 const lastVariantByTheme = new Map();
