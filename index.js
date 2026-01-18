@@ -633,10 +633,22 @@ const THEMES = [
 
 // ======= CLIENTE =======
 const client = new Client({
-  authStrategy: new LocalAuth({ clientId: "bot-whatsappdetran" }),
+  authStrategy: new LocalAuth({ 
+    clientId: "bot-detran-render"
+  }),
   puppeteer: {
-    headless: false,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--no-first-run',
+      '--no-zygote',
+      '--single-process',
+      '--disable-gpu'
+    ],
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium-browser'
   }
 });
 
